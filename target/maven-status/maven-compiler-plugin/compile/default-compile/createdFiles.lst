@@ -1,0 +1,10 @@
+configuration/MysqlConnection.class
+services/DetectLanguage.class
+models/Languages.class
+models/TurkishPrefix.class
+services/GlobalService.class
+helpers/Helper.class
+alican/nlp/Root.class
+helpers/HelperUtils.class
+models/EnglishPrefix.class
+models/GermanPrefix.class

@@ -2,12 +2,15 @@ package services;
 
 import java.util.List;
 
+import dao.ReservationDAO;
 import helpers.Helper;
 import models.Languages;
 
 public class GlobalService extends DetectLanguage {
 	
 	private static Helper helpers;
+	
+	private static ReservationDAO reservationDAO;
 	
 	@SuppressWarnings("static-access")
 	public static void process(String input) throws Exception {
@@ -37,10 +40,13 @@ public class GlobalService extends DetectLanguage {
 			
 			
 			
+			// keywords contains values in order: city, room, checkin, checkout.
 			//asdkasldk
 			for(int i = 0; i < keywords.size(); i++) {
 				System.out.println(keywords.get(i));
 			}
+			
+			reservationDAO.getDataFromDB();
 			
 			
 		} else {
