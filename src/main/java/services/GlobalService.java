@@ -84,8 +84,8 @@ public class GlobalService extends DetectLanguage {
 			int selection = Integer.valueOf(firstCharacter) - 1;
 			if(null != list.get(selection)) {
 				l = list.get(selection);
-				log("You reserved " + l.getRoomName());
-				log(l.getPrice() + "BAM has been taken from your account.");
+				log("You reserved " + l.getRoomName() + " for the dates between " + keywords.get(2) + " and " + keywords.get(3));
+				log((Integer)keywords.get(1) * l.getPrice() + "BAM has been taken from your account.");
 			}
 
 		} else {
