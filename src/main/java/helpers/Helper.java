@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import models.EnglishPrefix;
+import models.CroatianPrefix;
 import models.GermanPrefix;
 import models.TurkishPrefix;
 
@@ -15,21 +15,24 @@ public class Helper extends HelperUtils {
 	static List<String> parsedInput;
 	// keywords contains values in order: city, room, checkin, checkout.
 	
-	public static List<Object> parseInputInEnglish(String input) {
+	public static List<Object> parseInputInCroatian(String input) {
 		parsedInput = Arrays.asList(input.split(" "));
 
 		// I would like to to book one room in Sarajevo between 25.05.2018 and 30.05.2018.
 
-		index = parsedInput.indexOf(EnglishPrefix.and.getPrefix());
+		index = parsedInput.indexOf(CroatianPrefix.i.getPrefix());
 		checkin = (String) parsedInput.get(index - 1);
 		checkout = (String) parsedInput.get(index + 1);
-		index = parsedInput.indexOf(EnglishPrefix.in.getPrefix());
+		index = parsedInput.indexOf(CroatianPrefix.u.getPrefix());
 		city = (String) parsedInput.get(index + 1);
-		index = parsedInput.indexOf(EnglishPrefix.book.getPrefix());
+		// in croatian&bosnian, if place preposition is determined by "u" rather than "na", place name ends with "u".
+		// e.g.: "u Sarajevu, u Mostaru, u Istanbulu... but... na Otici, na Fakulteta...  
+		city = city.substring(0, city.length() - 1);
+		index = parsedInput.indexOf(CroatianPrefix.rezervirati.getPrefix());
 		room = (String) parsedInput.get(index + 1);
 		List<Object> keywords = new ArrayList<Object>();
 		keywords.add(city);
-		keywords.add(convertRoomInEnglish(room));
+		keywords.add(convertRoomInCroatian(room));
 		keywords.add(stringToDate(checkin));
 		keywords.add(stringToDate(checkout));
 

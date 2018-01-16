@@ -2,7 +2,7 @@ package models;
 
 public enum Languages {
 	
-	English("en"),
+	Croatian("hr"),
 	German("de"),
 	Turkish("tr");
 

@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
-import models.EnglishPrefix;
+import models.CroatianPrefix;
 import models.GermanPrefix;
 import models.TurkishPrefix;
 
@@ -32,15 +32,15 @@ public class HelperUtils {
 		}
 	}
 
-	public static Integer convertRoomInEnglish(String room) {
+	public static Integer convertRoomInCroatian(String room) {
 
-		if (room.equals(EnglishPrefix.one.getPrefix())) {
+		if (room.equals(CroatianPrefix.one.getPrefix())) {
 			return 1;
-		} else if (room.equals(EnglishPrefix.two.getPrefix())) {
+		} else if (room.equals(CroatianPrefix.two.getPrefix())) {
 			return 2;
-		} else if (room.equals(EnglishPrefix.three.getPrefix())) {
+		} else if (room.equals(CroatianPrefix.three.getPrefix())) {
 			return 3;
-		} else if (room.equals(EnglishPrefix.four.getPrefix())) {
+		} else if (room.equals(CroatianPrefix.four.getPrefix())) {
 			return 4;
 		} else {
 			return 5;
