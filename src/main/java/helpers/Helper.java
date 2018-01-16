@@ -1,14 +1,8 @@
 package helpers;
 
-import java.sql.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 
 import models.EnglishPrefix;
 import models.GermanPrefix;
@@ -18,11 +12,9 @@ public class Helper extends HelperUtils {
 
 	static String checkin, checkout, city, room = null;
 	static int index = 0;
-	@SuppressWarnings("rawtypes")
 	static List<String> parsedInput;
 	// keywords contains values in order: city, room, checkin, checkout.
 	
-	@SuppressWarnings("unchecked")
 	public static List<Object> parseInputInEnglish(String input) {
 		parsedInput = Arrays.asList(input.split(" "));
 
@@ -44,7 +36,6 @@ public class Helper extends HelperUtils {
 		return keywords;
 	}
 
-	@SuppressWarnings("unchecked")
 	public static List<Object> parseInputInGerman(String input) {
 		parsedInput = Arrays.asList(input.split(" "));
 
@@ -67,7 +58,6 @@ public class Helper extends HelperUtils {
 		return keywords;
 	}
 
-	@SuppressWarnings("unchecked")
 	public static List<Object> parseInputInTurkish(String input) {
 		parsedInput = Arrays.asList(input.split(" "));
 		// 25.05.2018 ve 30.05.2018 tarihleri arasinda Sarajevo'da bir oda rezervasyonu yaptirmak istiyorum.
