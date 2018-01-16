@@ -8,8 +8,8 @@ import java.sql.SQLException;
 
 public class MysqlConnection {
 
-	protected static Connection crunchifyConn = null;
-	protected static PreparedStatement crunchifyPrepareStat = null;
+	protected static Connection ribaConn = null;
+	protected static PreparedStatement ribaPrepareStat = null;
 
 	protected static void makeJDBCConnection() {
 
@@ -21,8 +21,8 @@ public class MysqlConnection {
 		}
 
 		try {
-			crunchifyConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/go2balkan", "root", "admin");
-			if (crunchifyConn == null)
+			ribaConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/go2balkan", "root", "admin");
+			if (ribaConn == null)
 				log("Failed to make connection!");
 		} catch (SQLException e) {
 			log("MySQL Connection Failed!");
@@ -37,13 +37,13 @@ public class MysqlConnection {
 		try {
 			String insertQueryStatement = "INSERT  INTO  Employee  VALUES  (?,?,?,?)";
 
-			crunchifyPrepareStat = crunchifyConn.prepareStatement(insertQueryStatement);
-			crunchifyPrepareStat.setString(1, companyName);
-			crunchifyPrepareStat.setString(2, address);
-			crunchifyPrepareStat.setInt(3, totalEmployee);
-			crunchifyPrepareStat.setString(4, webSite);
+			ribaPrepareStat = ribaConn.prepareStatement(insertQueryStatement);
+			ribaPrepareStat.setString(1, companyName);
+			ribaPrepareStat.setString(2, address);
+			ribaPrepareStat.setInt(3, totalEmployee);
+			ribaPrepareStat.setString(4, webSite);
 
-			crunchifyPrepareStat.executeUpdate();
+			ribaPrepareStat.executeUpdate();
 			log(companyName + " added successfully");
 		} catch (
 

@@ -33,11 +33,11 @@ public class ReservationDAO extends MysqlConnection {
 					+ "where c.city_name = ? GROUP by r.room_name;"; 
 					
 
-			crunchifyPrepareStat = crunchifyConn.prepareStatement(getQueryStatement);
-			crunchifyPrepareStat.setString(1, city);
+			ribaPrepareStat = ribaConn.prepareStatement(getQueryStatement);
+			ribaPrepareStat.setString(1, city);
 
 
-			ResultSet rs = crunchifyPrepareStat.executeQuery();
+			ResultSet rs = ribaPrepareStat.executeQuery();
 
 			int i = 0;
 			while (rs.next()) {

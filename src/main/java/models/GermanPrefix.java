@@ -8,7 +8,7 @@ public enum GermanPrefix {
 	four("vier"),
 	five("funf"),
 	//////******/////
-//	Ich möchte ein Zimmer in Sarajevo zwischen 25.05.2018 und 30.05.2018 buchen.
+//	Ich möchte ein Zimmer in Sarajevo zwischen 25.05.2018 und 30.05.2018 buchen
 	und("und"),
 	in("in"),
 	zimmer("zimmer");

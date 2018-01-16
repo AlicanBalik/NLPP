@@ -8,7 +8,7 @@ public enum TurkishPrefix {
 	four("dort"),
 	five("bes"),
 	//////*****////
-	// 25.05.2018 ve 30.05.2018 tarihleri arasinda Sarajevo'da bir oda rezervasyonu yaptirmak istiyorum.
+	// 25.05.2018 ve 30.05.2018 tarihleri arasinda Sarajevo'da bir oda rezervasyonu yaptirmak istiyorum
 	ve("ve"),
 	arasinda("arasinda"),
 	oda("oda");

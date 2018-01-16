@@ -8,6 +8,7 @@ public enum CroatianPrefix {
 	four("četiri"),
 	five("pet"),
 	////***///
+	// Želio bih rezervirati jednu sobu u Neumu između 25.05.2018 i 30.05.2018
 	rezervirati("rezervirati"),
 	u("u"),
 	i("i");
