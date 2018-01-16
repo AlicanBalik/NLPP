@@ -32,26 +32,6 @@ public class MysqlConnection {
 
 	}
 
-	private static void addDataToDB(String companyName, String address, int totalEmployee, String webSite) {
-
-		try {
-			String insertQueryStatement = "INSERT  INTO  Employee  VALUES  (?,?,?,?)";
-
-			ribaPrepareStat = ribaConn.prepareStatement(insertQueryStatement);
-			ribaPrepareStat.setString(1, companyName);
-			ribaPrepareStat.setString(2, address);
-			ribaPrepareStat.setInt(3, totalEmployee);
-			ribaPrepareStat.setString(4, webSite);
-
-			ribaPrepareStat.executeUpdate();
-			log(companyName + " added successfully");
-		} catch (
-
-		SQLException e) {
-			e.printStackTrace();
-		}
-	}
-
 	// Simple log utility -- it's a trick...
 	private static void log(String string) {
 		System.out.println(string);
