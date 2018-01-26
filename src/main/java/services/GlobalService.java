@@ -27,15 +27,12 @@ public class GlobalService extends DetectLanguage {
 		if (null != detectedLanguage) {
 
 			if (detectedLanguage.equals(Languages.Croatian.getPrefix())) {
-				// do croatian thing
 				log("croatian");
 				keywords = helpers.parseInputInCroatian(input);
 			} else if (detectedLanguage.equals(Languages.German.getPrefix())) {
-				// do german thing
 				log("german");
 				keywords = helpers.parseInputInGerman(input);
 			} else if (detectedLanguage.equals(Languages.Turkish.getPrefix())) {
-				// do turkish thing
 				log("turkish");
 				keywords = helpers.parseInputInTurkish(input);
 			} else {
@@ -75,7 +72,6 @@ public class GlobalService extends DetectLanguage {
 				log("Guest number: " + l.getCapacity() + " "
 						+ (roomChoice == l.getCapacity() ? "**Best match for you!**" : ""));
 				log("Price: " + l.getPrice() + "BAM");
-				log("\n\n\n");
 			}
 			log("-------------------------------------------");
 			log("Which book do you want to book?");
