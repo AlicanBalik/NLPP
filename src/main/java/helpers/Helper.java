@@ -18,7 +18,7 @@ public class Helper extends HelperUtils {
 	public static List<Object> parseInputInCroatian(String input) {
 		parsedInput = Arrays.asList(input.split(" "));
 
-		// I would like to to book one room in Sarajevo between 25.05.2018 and 30.05.2018.
+		// Želio bih rezervirati jednu sobu u Neumu između 25.05.2018 i 30.05.2018
 
 		index = parsedInput.indexOf(CroatianPrefix.i.getPrefix());
 		checkin = (String) parsedInput.get(index - 1);

@@ -58,7 +58,7 @@ public class GlobalService extends DetectLanguage {
 			// Map.Entry<Object, ListResult> entry = map.entrySet().iterator().next();
 			// ListResult l = entry.getValue();
 			ListResult l = list.get(0);
-			log("Okay. I got a result...\nI found " + list.size() + " " + r + " just for you...");
+			log("Okay. I got something...\nI found " + list.size() + " " + r + " just for you...");
 			log("**********************");
 			log("Accommodation:");
 			log("Name: " + l.getName() + "  " + l.getRank() + "*");
@@ -74,7 +74,7 @@ public class GlobalService extends DetectLanguage {
 				log("Price: " + l.getPrice() + "BAM");
 			}
 			log("-------------------------------------------");
-			log("Which book do you want to book?");
+			log("Which room would you like to book?");
 			System.err.println("Warning: Once you type a number from numpad, the sytem will immediately book the room");
 			Scanner reader = new Scanner(System.in);
 			String input = reader.nextLine().toLowerCase();
